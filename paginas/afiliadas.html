@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../imgs/icon-site.png">
+    <title>UPB-Undos Pelo Bem</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-menu">
+            <a href="../index.html"><img src="../imgs/upb-logo.png" alt="" class="img-logo-menu"></a>
+        </div>
+        <nav>
+            <a href="../paginas/participe.html">
+                <button class="btn-nav">Participe Já!</button>
+            </a>
+            <a href="../paginas/afiliadas.html">
+                <button class="btn-nav">Ongs Afiliadas</button>
+            </a>
+            <a href="">
+                <button class="btn-nav">Meu Perfil</button>
+            </a>
+            <a href="../paginas/sobre.html">
+                <button class="btn-nav">Sobre Nós</button>
+            </a>
+        </nav>
+        <div class="redes-social">
+            <button class="btn-redes">
+                <img src="../imgs/instagram.png" alt="" class="img-redes">
+            </button>
+            <button class="btn-redes">
+                <img src="../imgs/twitter.png" alt="" class="img-redes">
+            </button>
+        </div>
+    </header>
+
+    <div class="container-afiliadas">
+
+        <div class="title-v1">
+            <h1>Ajude as Instituições de São Carlos - SP</h1>
+        </div>
+
+        <div class="text-afiliados">
+            <p>Confira abaixo as instituições de São Carlos - SP e saiba como ajudar.</p>
+        </div>
+
+        <div class="text-afiliadas">
+            <p>A UPB trabalha com várias ONGs que necessitam de ajuda junto com o auxílio da tecnologia, visando assim ter um alcance maior e de mais fácil acesso em alcançar a doação de maneira prática e segura que cada ONG necessita.</p>
+        </div>
+
+        <div class="carousel-hype">
+            <div class="carousel-item active" id="item1">
+                <div>
+                    <div class="photo-ong">
+                        <img src="" alt="">
+                    </div>
+                    <div class="title-ong">
+                        <h2>Uniara</h2>
+                    </div>
+                    <div class="text-ong">
+                        <p>Coisas á ser ditas, amo muito esse negc de ongs, me divirto muito todos os dias, é coisa de
+                            gente maluquinha slk cachorreiraa uhu tem que doar memoo namorall, quem n doar é gay</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" id="item2">
+                <div class="photo-ong">
+                    <img src="" alt="">
+                </div>
+                <div class="title-ong">
+                    <h2>Uniara</h2>
+                </div>
+                <div class="text-ong">
+                    <p>Coisas á ser ditas, amo muito esse negc de ongs, me divirto muito todos os dias, é coisa de gente
+                        maluquinha slk cachorreiraa uhu tem que doar memoo namorall, quem n doar é gay</p>
+                </div>
+            </div>
+            <div class="carousel-item" id="item3">
+                <div class="photo-ong">
+                    <img src="" alt="">
+                </div>
+                <div class="title-ong">
+                    <h2>Uniara</h2>
+                </div>
+                <div class="text-ong">
+                    <p>Coisas á ser ditas, amo muito esse negc de ongs, me divirto muito todos os dias, é coisa de gente
+                        maluquinha slk cachorreiraa uhu tem que doar memoo namorall, quem n doar é gay</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">
+        <img src="../imgs/right.png" alt="" class="icon-btn">
+    </button>
+    <button id="Contrast" onclick="toggleHighContrast()">
+        <img src="../imgs/contrast.png" alt="" class="icon-btn">
+    </button>
+
+    <script>
+        const carousel = document.querySelector('.carousel-hype');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showItem(index) {
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        }
+
+        setInterval(nextItem, 5000);
+
+        const backButton = document.querySelector('#back-to-top');
+
+        // Função para rolar suavemente para o topo
+        function scrollToTop() {
+            if (window.scrollY !== 0) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Evento de clique no botão
+        backButton.addEventListener('click', scrollToTop);
+
+        function toggleHighContrast() {
+            var bodyElement = document.querySelector('body');
+            bodyElement.classList.toggle('high-contrast');
+
+            // Verifica se a classe high-contrast está ativada
+            if (bodyElement.classList.contains('high-contrast')) {
+                // Se estiver ativada, define a cor para as classes desejadas
+                applyTextColorsForHighContrast(true);
+                applyBackGroundForHighContrast(true);
+            } else {
+                // Se estiver desativada, remove a cor personalizada
+                applyTextColorsForHighContrast(false);
+                applyBackGroundForHighContrast(false);
+            }
+        }
+
+        function applyTextColorsForHighContrast(isActive) {
+            var targetClasses = ['title-v1', 'text-donate', 'text-info', 'title-v2', 'btn-option', 'btn-nav']; // Substitua com as suas classes desejadas
+
+            targetClasses.forEach(function (className) {
+                var elements = document.getElementsByClassName(className);
+
+                for (var i = 0; i < elements.length; i++) {
+                    if (isActive) {
+                        // Aplica a cor desejada quando o modo de alto contraste está ativado
+                        elements[i].style.color = '#c0c700';
+                        elements[i].style.textShadow = 'none';
+                    } else {
+                        // Remove a cor personalizada quando o modo de alto contraste é desativado
+                        elements[i].style.color = '';
+                        elements[i].style.textShadow = '';
+                    }
+                }
+            });
+        }
+
+        function applyBackGroundForHighContrast(isActive) {
+            var targetClasses = ['molde-info', 'btn-option']; // Substitua com as suas classes desejadas
+
+            targetClasses.forEach(function (className) {
+                var elements = document.getElementsByClassName(className);
+
+                for (var i = 0; i < elements.length; i++) {
+                    if (isActive) {
+                        // Aplica a cor desejada quando o modo de alto contraste está ativado
+                        elements[i].style.backgroundColor = 'black';
+                    } else {
+                        // Remove a cor personalizada quando o modo de alto contraste é desativado
+                        elements[i].style.backgroundColor = '';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

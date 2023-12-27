@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../imgs/icon-site.png">
+    <title>UPB-Undos Pelo Bem</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-menu">
+            <a href="../index.html"><img src="../imgs/upb-logo.png" alt="" class="img-logo-menu"></a>
+        </div>
+        <nav>
+            <a href="../paginas/participe.html">
+                <button class="btn-nav">Participe Já!</button>
+            </a>
+            <a href="../paginas/afiliadas.html">
+                <button class="btn-nav">Ongs Afiliadas</button>
+            </a>
+            <a href="">
+                <button class="btn-nav">Meu Perfil</button>
+            </a>
+            <a href="../paginas/sobre.html">
+                <button class="btn-nav">Sobre Nós</button>
+            </a>
+        </nav>
+        <div class="redes-social">
+            <button class="btn-redes">
+                <img src="../imgs/instagram.png" alt="" class="img-redes">
+            </button>
+            <button class="btn-redes">
+                <img src="../imgs/twitter.png" alt="" class="img-redes">
+            </button>
+        </div>
+    </header>
+
+    <div class="container-sobre">
+        <div class="title-v1">
+            <h1>SOBRE</h1>
+        </div>
+
+        <div class="centralizar">
+            <div class="logo-noria"><img src="../imgs/Logoo.png" alt="UPB" class="logo-sobre"></div>
+            <div class="text-logo-sobre">
+                <p>O "UPB (Unidos Pelo Bem)" é um site inovador dedicado à promoção da solidariedade e da ajuda
+                    humanitária. Nesta plataforma, doadores encontram uma maneira fácil e segura de contribuir para
+                    causas nobres, seja por meio de doações em dinheiro, roupas, medicamentos, artigos de higiene ou
+                    alimentos. O site oferece uma variedade de opções, permitindo que os usuários escolham o método de
+                    contribuição que mais se alinha com suas intenções altruístas. Organizações não governamentais têm a
+                    oportunidade de se cadastrar no UPB, estabelecendo uma conexão direta com potenciais doadores. Com
+                    um processo simplificado, o site facilita a interação entre doadores generosos e organizações
+                    comprometidas em fazer a diferença, criando uma comunidade virtual dedicada ao bem comum.</p>
+            </div>
+        </div>
+        <div class="centralizar">
+            <div class="text-logo-sobre">
+                <p>A Noria, uma empresa visionária, é a criadora do site "UPB (Unidos Pelo Bem)", uma plataforma
+                    dedicada à promoção de doações para organizações não governamentais. Comprometida com a
+                    transformação social, a Noria estabeleceu um espaço online onde a generosidade encontra seu
+                    propósito. O UPB transcende o conceito tradicional de páginas de doações; é um portal que conecta
+                    indivíduos dispostos a causar impacto a projetos inspiradores. A Noria acredita na união para o bem
+                    como a força motriz para construir um mundo melhor. Assim como a correnteza constante de uma noria,
+                    a empresa impulsiona a solidariedade, permitindo que cada contribuição faça parte de um movimento
+                    maior.</p>
+            </div>
+            <div class="logo-noria"><img src="../imgs/Captura_de_tela_2023-10-22_161655-removebg-preview (2).png"
+                    alt="Noria" class="logo-sobre"></div>
+        </div>
+
+        <div class="title-v1">
+            <h1>MEMBROS:</h1>
+        </div>
+
+        <div class="side-right">
+            <div class="right-membro">
+                <div class="center-mobile">
+                    <img src="../imgs/gaby.jpg" alt="gaby" class="img-membro">
+                </div>
+                <div class="base-membro">
+                    <div class="title-v3">
+                        <h1>Gabrielli</h1>
+                    </div>
+                    <div class="text-sobre">
+                        <p>Planejamento geral, documentação, desenvolvimento e design de interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-left">
+            <div class="left-membro">
+                <div class="base-membro">
+                    <div class="title-v3">
+                        <h1>Pamela</h1>
+                    </div>
+                    <div class="text-sobre">
+                        <p>Documentação e planejamento.</p>
+                    </div>
+                </div>
+                <div class="center-mobile">
+                    <img src="../imgs/pami.png" alt="pami" class="img-membro">
+                </div>
+            </div>
+        </div>
+
+        <div class="side-right">
+            <div class="right-membro">
+                <div class="center-mobile">
+                    <img src="../imgs/ces.png" alt="cestaro" class="img-membro">
+                </div>
+                <div class="base-membro">
+                    <div class="title-v3">
+                        <h1>Victor Hugo</h1>
+                    </div>
+                    <div class="center-mobile-text">
+                        <div class="text-sobre">
+                            <p>Programação, planejamento de sistemas e design de interface.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-left">
+            <div class="left-membro">
+                <div class="base-membro">
+                    <div class="title-v3">
+                        <h1>Yasmin</h1>
+                    </div>
+                    <div class="text-sobre">
+                        <p>Desing de interface, documentação e artes visuais.</p>
+                    </div>
+                </div>
+                <div class="center-mobile">
+                    <img src="../imgs/eu icon!.png" alt="yas" class="img-membro">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">
+        <img src="../imgs/right.png" alt="" class="icon-btn">
+    </button>
+    <button id="Contrast" onclick="toggleHighContrast()">
+        <img src="../imgs/contrast.png" alt="" class="icon-btn">
+    </button>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const images = carousel.querySelectorAll('img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.classList.add('active');
+                } else {
+                    image.classList.remove('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 5000);
+
+        const backButton = document.querySelector('#back-to-top');
+
+        // Função para rolar suavemente para o topo
+        function scrollToTop() {
+            if (window.scrollY !== 0) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Evento de clique no botão
+        backButton.addEventListener('click', scrollToTop);
+
+        function toggleHighContrast() {
+            var bodyElement = document.querySelector('body');
+            bodyElement.classList.toggle('high-contrast');
+
+            // Verifica se a classe high-contrast está ativada
+            if (bodyElement.classList.contains('high-contrast')) {
+                // Se estiver ativada, define a cor para as classes desejadas
+                applyTextColorsForHighContrast(true);
+                applyBackGroundForHighContrast(true);
+            } else {
+                // Se estiver desativada, remove a cor personalizada
+                applyTextColorsForHighContrast(false);
+                applyBackGroundForHighContrast(false);
+            }
+        }
+
+        function applyTextColorsForHighContrast(isActive) {
+            var targetClasses = ['title-v1', 'text-donate', 'text-info', 'title-v2', 'btn-option', 'btn-nav', 'text-logo-sobre', 'title-v3', 'text-sobre']; // Substitua com as suas classes desejadas
+
+            targetClasses.forEach(function (className) {
+                var elements = document.getElementsByClassName(className);
+
+                for (var i = 0; i < elements.length; i++) {
+                    if (isActive) {
+                        // Aplica a cor desejada quando o modo de alto contraste está ativado
+                        elements[i].style.color = 'yellow';
+                        elements[i].style.textShadow = 'none';
+                    } else {
+                        // Remove a cor personalizada quando o modo de alto contraste é desativado
+                        elements[i].style.color = '';
+                        elements[i].style.textShadow = '';
+                    }
+                }
+            });
+        }
+
+        function applyBackGroundForHighContrast(isActive) {
+            var targetClasses = ['molde-info', 'btn-option']; // Substitua com as suas classes desejadas
+
+            targetClasses.forEach(function (className) {
+                var elements = document.getElementsByClassName(className);
+
+                for (var i = 0; i < elements.length; i++) {
+                    if (isActive) {
+                        // Aplica a cor desejada quando o modo de alto contraste está ativado
+                        elements[i].style.backgroundColor = 'black';
+                    } else {
+                        // Remove a cor personalizada quando o modo de alto contraste é desativado
+                        elements[i].style.backgroundColor = '';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+<footer></footer>
+
+</html>

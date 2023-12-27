@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/imgs/icon-site.png">
+  <title>UPB-Undos Pelo Bem</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-menu">
+      <a href="/index.html"><img src="/imgs/upb-logo.png" alt="" class="img-logo-menu"></a>
+    </div>
+    <nav>
+      <a href="/paginas/participe.html">
+        <button class="btn-nav">Participe Já!</button>
+      </a>
+      <a href="/paginas/afiliadas.html">
+        <button class="btn-nav">Ongs Afiliadas</button>
+      </a>
+      <a href="">
+        <button class="btn-nav">Meu Perfil</button>
+      </a>
+      <a href="/paginas/sobre.html">
+        <button class="btn-nav">Sobre Nós</button>
+      </a>
+    </nav>
+    <div class="redes-social">
+      <button class="btn-redes">
+        <img src="/imgs/instagram.png" alt="" class="img-redes">
+      </button>
+      <button class="btn-redes">
+        <img src="/imgs/twitter.png" alt="" class="img-redes">
+      </button>
+    </div>
+  </header>
+
+  <div class="carousel">
+    <img src="/imgs/primeira.jpg" alt="Imagem 1" class="active">
+    <img src="/imgs/seg.jpg" alt="Imagem 2">
+    <img src="/imgs/terceira.jpg" alt="Imagem 3">
+  </div>
+
+  <div class="container-inicial">
+    <div class="title-v1">
+      <h1>UNIDOS PELO BEM</h1>
+    </div>
+    <div class="content-info">
+      <div class="molde-info">
+        <img src="/imgs/escritorio.png" alt="" class="icon-info">
+        <div class="text-info">
+          <p>A U.P.B (Unidos Pelo Bem) é um site confiável que se dedica a realizar por meio de doações, com o objetivo
+            de reduzir a desigualdade social na região de São Carlos melhorando assim o bem-estar social. Colaborar
+            conosco significa contribuir para uma sociedade mais justa, onde todos tenham acesso a necessidades básicas.
+          </p>
+        </div>
+      </div>
+      <div class="molde-info">
+        <img src="/imgs/verificar.png" alt="" class="icon-info">
+        <div class="text-info">
+          <p>Nossos processos de doação são seguros e passam por verificações rigorosas para proteger doadores e
+            beneficiários. Usamos medidas avançadas de segurança para garantir a integridade de suas informações
+            pessoais e financeiras, assegurando que suas contribuições sejam usadas de forma ética e eficaz, alinhadas
+            com nossa missão de transparência e confiabilidade.</p>
+        </div>
+      </div>
+      <div class="molde-info">
+        <img src="/imgs/sacola-de-compras.png" alt="" class="icon-info">
+        <div class="text-info">
+          <p>Nosso sistema prático e rápido com o unico intuito de facilitar a sua doação para as organizações
+            humanitárias, conte com o nosso site para que você possa não só fazer a sua doação, mas também para que você
+            possa escolher a qual causa vai ajudar de acordo com o seu interesse e vontade, contamos com você para fazer
+            o mundo um lugar melhor ajudando o próximo para que possamos viver em um mundo com mais cor e alegria para
+            todos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-v1">
+      <h1>COMO MELHORAMOS VIDAS</h1>
+    </div>
+
+    <div class="content-donate">
+      <div class="molde-donate">
+        <img src="/imgs/food.png" alt="" class="icon-donate">
+        <div class="title-v1">
+          <h2>ALimentos</h2>
+        </div>
+        <div class="text-donate">
+          <p>Com as suas doações proporcionamos alimentação para Ongs que precisam de ajuda.</p>
+        </div>
+      </div>
+      <div class="molde-donate">
+        <img src="/imgs/pill.png" alt="" class="icon-donate">
+        <div class="title-v1">
+          <h2>Remédios</h2>
+        </div>
+        <div class="text-donate">
+          <p>Com as suas doações proporcionamos medicamentos para as ONGs que precisam de ajuda.</p>
+        </div>
+      </div>
+      <div class="molde-donate">
+        <img src="/imgs/hand-washing.png" alt="" class="icon-donate">
+        <div class="title-v1">
+          <h2>Higiene</h2>
+        </div>
+        <div class="text-donate">
+          <p>Com as suas doações proporcionamos produtos de higiene pessoal para ONGs que precisam de ajuda.</p>
+        </div>
+      </div>
+      <div class="molde-donate">
+        <img src="/imgs/casual-t-shirt-.png" alt="" class="icon-donate">
+        <div class="title-v1">
+          <h2>Roupas</h2>
+        </div>
+        <div class="text-donate">
+          <p>Com as suas doações proporcionamos roupas para as ONGs que precisam de ajuda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="back-to-top" onclick="scrollToTop()">
+    <img src="/imgs/right.png" alt="" class="icon-btn">
+  </button>
+  <button id="Contrast" onclick="toggleHighContrast()"><img src="/imgs/contrast.png" alt="" class="icon-btn"></button>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((image, i) => {
+        if (i === index) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    setInterval(nextImage, 5000);
+
+    const backButton = document.querySelector('#back-to-top');
+
+    // Função para rolar suavemente para o topo
+    function scrollToTop() {
+      if (window.scrollY !== 0) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Evento de clique no botão
+    backButton.addEventListener('click', scrollToTop);
+
+    function toggleHighContrast() {
+      var bodyElement = document.querySelector('body');
+      bodyElement.classList.toggle('high-contrast');
+
+      // Verifica se a classe high-contrast está ativada
+      if (bodyElement.classList.contains('high-contrast')) {
+        // Se estiver ativada, define a cor para as classes desejadas
+        applyTextColorsForHighContrast(true);
+        applyBackGroundForHighContrast(true);
+      } else {
+        // Se estiver desativada, remove a cor personalizada
+        applyTextColorsForHighContrast(false);
+        applyBackGroundForHighContrast(false);
+      }
+    }
+
+    function applyTextColorsForHighContrast(isActive) {
+      var targetClasses = ['title-v1', 'text-donate', 'text-info', 'btn-nav']; // Substitua com as suas classes desejadas
+
+      targetClasses.forEach(function (className) {
+        var elements = document.getElementsByClassName(className);
+
+        for (var i = 0; i < elements.length; i++) {
+          if (isActive) {
+            // Aplica a cor desejada quando o modo de alto contraste está ativado
+            elements[i].style.color = '#c0c700';
+            elements[i].style.textShadow = 'none';
+          } else {
+            // Remove a cor personalizada quando o modo de alto contraste é desativado
+            elements[i].style.color = '';
+            elements[i].style.textShadow = '';
+          }
+        }
+      });
+    }
+
+    function applyBackGroundForHighContrast(isActive) {
+      var targetClasses = ['molde-info']; // Substitua com as suas classes desejadas
+
+      targetClasses.forEach(function (className) {
+        var elements = document.getElementsByClassName(className);
+
+        for (var i = 0; i < elements.length; i++) {
+          if (isActive) {
+            // Aplica a cor desejada quando o modo de alto contraste está ativado
+            elements[i].style.backgroundColor = 'black';
+          } else {
+            // Remove a cor personalizada quando o modo de alto contraste é desativado
+            elements[i].style.backgroundColor = '';
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+<footer></footer>
+
+</html>
